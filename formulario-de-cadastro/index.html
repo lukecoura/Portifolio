@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="form-image">
+            <img src="img/undraw_shopping_re_hdd9.svg" alt="Imagem do Formulário">
+        </section>
+
+        <section class="form">
+            <form action="#">
+                <header>
+                    <aside class="title">
+                        <h1>Cadastre-se</h1>
+                    </aside>
+
+                    <aside class="login-button">
+                        <button><a href="#">Entrar</a></button>
+                    </aside>
+                </header>
+
+                <article class="input-group">
+                    <aside class="input-box">
+                        <label for="firstname">Primeiro nome:</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Digite seu primeiro nome" required>
+                    </aside>
+
+                    <aside class="input-box">
+                        <label for="lastname">Sobrenome:</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Digite seu sobrenome" required>
+                    </aside>
+
+                    <aside class="input-box">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+                    </aside>
+
+                    <aside class="input-box">
+                        <label for="cel">Celular:</label>
+                        <input type="tel" name="cel" id="cel" placeholder="(xx) xxxxx-xxxx" required pattern="^\(\d{2}\)\d{4, 5}-\d{4}$">
+                    </aside>
+
+                    <aside class="input-box">
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required minlength="8">
+                    </aside>
+
+                    <aside class="input-box">
+                        <label for="confirma-senha">Confirmar senha:</label>
+                        <input type="password" name="confirma-senha" id="confirma-senha" placeholder="Confirme sua senha" required minlength="8">
+                    </aside>
+                </article>
+
+                <article>
+                    <aside class="gender-title">
+                        <h6>Gênero</h6>
+                    </aside>
+
+                    <article class="gender-group">
+                        <aside class="gender-input">
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Feminino</label>
+                        </aside>
+
+                        <aside class="gender-input">
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">Masculino</label>
+                        </aside>
+
+                        <aside class="gender-input">
+                            <input type="radio" name="gender" id="outro">
+                            <label for="outro">Outros</label>
+                        </aside>
+
+                        <aside class="gender-input">
+                            <input type="radio" name="gender" id="nao-informar">
+                            <label for="nao-informar">Não informar</label>
+                        </aside>
+                    </article>
+                </article>
+
+                <article class="continue-button">
+                    <button>
+                        <a href="#">Continuar</a>
+                    </button>
+                </article>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
