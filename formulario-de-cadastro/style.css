@@ -15,7 +15,7 @@
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,8 +23,8 @@ body {
     background: var(--cor-de-fundo);
 }
 
-.container {
-    width: 80%;
+main {
+    width: 80vw;
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgb(0, 0, 0, .212);
@@ -48,13 +48,11 @@ main > .form {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-color: white;
     padding: 3rem;
 }
 
 form > header {
-    border-bottom: 3rem;
     display: flex;
     justify-content: space-between;
 }
@@ -64,15 +62,8 @@ aside > h1::after {
     display: block;
     width: 5rem;
     height: 0.3rem;
-    background-color: var(--cor-adicional);
-    margin: 0 auto;
-    position: absolute;
     border-radius: 10px;
-}
-
-header > .login-button {
-    display: flex;
-    align-items: center;
+    background-color: var(--cor-adicional);
 }
 
 .login-button > button {
@@ -175,7 +166,7 @@ button > a {
 }
 
 @media screen and (max-width: 1331px) {
-    main > .form-image {
+    .container > .form-image {
         display: none;
     }
 
@@ -201,11 +192,24 @@ button > a {
 }
 
 @media screen and (max-width: 594px) {
+    .login-button {
+        padding-right: 10px;
+    }
+
     .input-group {
         overflow-y: scroll;
     }
 
+    .input-box {
+        padding-left: 15px;
+        padding-bottom: 5px;
+    }
+
     .gender-input {
         padding-left: 5px;
+    }
+
+    h1, h6 {
+        padding: 10px;
     }
 }
