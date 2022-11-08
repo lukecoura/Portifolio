@@ -1,0 +1,39 @@
+* {
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.iniciar, .pausar, .parar {
+    height: 2rem;
+    width: 5em;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.iniciar, .pausar, .parar:hover {
+    cursor: pointer;
+}
+
+.iniciar {
+    background-color: rgb(56, 212, 56);
+}
+
+.pausar {
+    background-color: rgb(255, 255, 65);
+}
+
+.parar {
+    background-color: rgb(241, 35, 35);
+}
