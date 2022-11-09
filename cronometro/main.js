@@ -2,23 +2,26 @@ let horas = 0;
 let minutos = 0;
 let segundos = 0;
 let intervalo = 0;
+let iniciarContagem = document.querySelector('.iniciar')
+let pausarContagem = document.querySelector('.pausar')
+let pararContagem = document.querySelector('.parar')
 
-function start() {
+iniciarContagem.addEventListener('click', function() {
     watch()
     intervalo = setInterval(watch, 1000);
-}
+});
 
-function pause() {
+pausarContagem.addEventListener('click', function() {
     clearInterval(intervalo);
-}
+});
 
-function parar() {
+pararContagem.addEventListener('click', function() {
     clearInterval(intervalo);
     horas = 0;
     minutos = 0;
     segundos = 0;
     document.querySelector('.watch').innerText = `00:00:00`;
-}
+});
 
 function doisDigitos(digito) {
     if (digito < 10) {
