@@ -1,13 +1,15 @@
+let relogio = document.querySelector('.watch');
+let iniciarContagem = document.querySelector('.iniciar');
+let pausarContagem = document.querySelector('.pausar');
+let pararContagem = document.querySelector('.parar');
+
 let horas = 0;
 let minutos = 0;
 let segundos = 0;
 let intervalo = 0;
-let iniciarContagem = document.querySelector('.iniciar')
-let pausarContagem = document.querySelector('.pausar')
-let pararContagem = document.querySelector('.parar')
 
 iniciarContagem.addEventListener('click', function() {
-    watch()
+    watch();
     intervalo = setInterval(watch, 1000);
 });
 
@@ -20,26 +22,28 @@ pararContagem.addEventListener('click', function() {
     horas = 0;
     minutos = 0;
     segundos = 0;
-    document.querySelector('.watch').innerText = `00:00:00`;
+    relogio.innerHTML = '00:00:00';
 });
 
 function doisDigitos(digito) {
     if (digito < 10) {
-        return ('0' + digito)
+        return '0' + digito;
     } else {
-        return (digito)
+        return digito;
     }
 }
 
 function watch() {
-    segundos++
+    segundos++;
     if (segundos == 60) {
-        minutos++
+        minutos++;
         segundos = 0;
+
         if (minutos == 60) {
+            horas++;
             minutos = 0;
-            horas++
         }
     }
-    document.querySelector('.watch').innerText = doisDigitos(horas) + ':' + doisDigitos(minutos) + ':' + doisDigitos(segundos);
+
+    relogio.innerHTML = doisDigitos(horas) + ':' + doisDigitos(minutos) + ':' + doisDigitos(segundos);
 }
