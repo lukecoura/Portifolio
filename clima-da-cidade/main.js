@@ -24,17 +24,21 @@ const getWeatherData = async (city) => {
 }
 
 const showWeatherData = async (city) => {
-    const data = await getWeatherData(city);
+    try {
+        const data = await getWeatherData(city);
 
-    cityElement.innerText = data.name;
-    temperatureElement.innerText = parseInt(data.main.temp);
-    descriptionElement.innerText = data.weather[0].description;
-    weatherIconElement.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
-    countryElement.setAttribute('src', apiCountryURL + data.sys.country);
-    humidityElement.innerText = `${data.main.humidity}%`;
-    windElement.innerText = `${data.wind.speed}km/h`
-
-    weatherContainer.classList.remove('hide');
+        cityElement.innerText = data.name;
+        temperatureElement.innerText = parseInt(data.main.temp);
+        descriptionElement.innerText = data.weather[0].description;
+        weatherIconElement.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+        countryElement.setAttribute('src', apiCountryURL + data.sys.country);
+        humidityElement.innerText = `${data.main.humidity}%`;
+        windElement.innerText = `${data.wind.speed}km/h`;
+    
+        weatherContainer.classList.remove('hide');
+    } catch {
+        alert('Cidade não encontrada. Por favor, digite uma cidade válida.');
+    }
 }
 
 
