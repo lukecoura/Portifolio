@@ -43,9 +43,7 @@ const showWeatherData = async (city) => {
 
 
 //Eventos
-searchButton.addEventListener('click', (evento) => {
-    evento.preventDefault();
-    
+searchButton.addEventListener('click', () => {
     const city = cityInput.value;
 
     showWeatherData(city);
