@@ -19,7 +19,7 @@ const getWeatherData = async (city) => {
 
     const apiResponse = await fetch(apiWeatherURL);
     const apiData = await apiResponse.json();
-
+    
     return apiData;
 }
 
