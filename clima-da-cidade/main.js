@@ -34,7 +34,7 @@ const showWeatherData = async (city) => {
         countryElement.setAttribute('src', apiCountryURL + data.sys.country);
         humidityElement.innerText = `${data.main.humidity}%`;
         windElement.innerText = `${data.wind.speed}km/h`;
-    
+    console.log(data)
         weatherContainer.classList.remove('hide');
     } catch {
         alert('Cidade não encontrada. Por favor, digite uma cidade válida.');
