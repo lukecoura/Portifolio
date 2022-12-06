@@ -47,8 +47,10 @@ prevButton.addEventListener('click', () => {
 });
 
 nextButton.addEventListener('click', () => {
-    searchPokemon++;
-    renderPokemon(searchPokemon);
+    if (searchPokemon < 649) {
+        searchPokemon++;
+        renderPokemon(searchPokemon);
+    }
 });
 
 renderPokemon(searchPokemon);
