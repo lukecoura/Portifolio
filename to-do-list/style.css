@@ -75,3 +75,23 @@ body {
 .error::placeholder {
     color: red;
 }
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.task-item i {
+    background-color: #41b883;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
